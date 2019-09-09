@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope/" soap:encodingStyle="http://www.w3.org/2003/05/soap-encoding">
+  <soap:Body>
+    <sms:DeliveryReport xmlns:sms="https://www.w3schools.com/prices">
+      <sms:smsid>%QUERY[smsid]%</sms:smsid>
+      <sms:receivedts>%QUERY[receivedts]%</sms:receivedts>
+      <sms:deliveredts>%QUERY[deliveredts]%</sms:deliveredts>
+      <sms:status>%QUERY[status]%</sms:status>
+      <sms:user>%QUERY[user]%</sms:user>
+      <sms:from>%QUERY[from]%</sms:from>
+      <sms:to>%QUERY[to]%</sms:to>
+      <sms:text>%QUERY[text]%</sms:text>
+      <sms:errorcode>%QUERY[errorcode]%</sms:errorcode>
+    </sms:DeliveryReport>
+  </soap:Body>
+</soap:Envelope>

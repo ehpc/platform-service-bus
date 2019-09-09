@@ -1,0 +1,46 @@
+{
+    "adapters": [
+        {
+            "name": "World SMS",
+            "port": 8700,
+            "rules": [
+                {
+                    "from": {
+                        "path": "/dlr",
+                        "http-method": "GET"
+                    },
+                    "to": {
+                        "url": "https://httpbin.org/post",
+                        "http-method": "POST",
+                        "headers": [
+                            "Content-Type: text/xml"
+                        ],
+                        "data-file": "config/world-sms-dlr-to.xml"
+                    }
+                },
+                {
+                    "from": {
+                        "path": "/send-sms",
+                        "http-method": "POST"
+                    },
+                    "to": {
+                        "url": "https://httpbin.org/post",
+                        "http-method": "POST",
+                        "headers": [
+                            "Content-Type: application/json",
+                            "Accept: application/json",
+                            "Authorization: Basic AUTHORIZATION_KEY"
+                        ],
+                        "data-file": "config/world-sms-send-to.json"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Test",
+            "port": 8701,
+            "rules": [
+            ]
+        }
+    ]
+}
