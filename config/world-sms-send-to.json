@@ -1,5 +1,6 @@
 {
     "from": "%REGEX[from>([^<\\s]+)][1]%",
     "to": "%REGEX[to>([^<\\s]+)][1]%",
-    "text": "%REGEX[text>([^<\\s]+)][1]%"
+    "text": "%REGEX[text>([^<\\s]+)][1]%",
+    "form": "%FORM[test]%"
 }
