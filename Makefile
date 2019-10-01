@@ -7,4 +7,4 @@ test:
 	go test ./...
 
 build:
-	go build -o platfrom-service-bus main.go
+	go build -o platform-service-bus main.go
